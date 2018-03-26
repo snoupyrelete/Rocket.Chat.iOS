@@ -5,7 +5,7 @@
 //  Created by Matheus Cardoso on 9/18/17.
 //  Copyright © 2017 Rocket.Chat. All rights reserved.
 //
-//  DOCS: ??
+//  DOCS: https://rocket.chat/docs/developer-guides/rest-api/commands/list/
 
 import SwiftyJSON
 

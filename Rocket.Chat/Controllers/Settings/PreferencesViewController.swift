@@ -47,7 +47,12 @@ final class PreferencesViewController: UITableViewController {
             labelApp.text = viewModel.appicon
         }
     }
-
+    @IBOutlet weak var labelGetColors: UILabel! {
+        didSet {
+            labelGetColors.text = viewModel.colorSettings
+        }
+    }
+    
     override var navigationController: PreferencesNavigationController? {
         return super.navigationController as? PreferencesNavigationController
     }
@@ -92,6 +97,10 @@ final class PreferencesViewController: UITableViewController {
     private func cellLanguageDidPressed() {
         performSegue(withIdentifier: "Language", sender: nil)
     }
+    
+    private func cellGetColorsDidPressed() {
+        performSegue(withIdentifier: "GetColors", sender: nil)
+    }
 
     // MARK: UITableViewDelegate
 
@@ -103,6 +112,9 @@ final class PreferencesViewController: UITableViewController {
                 cellLanguageDidPressed()
             } else if indexPath.row == 2 {
                 cellAppIconDidPressed()
+            }
+            else if indexPath.row == 3 {
+                cellGetColorsDidPressed()
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
